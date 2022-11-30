@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "title": "서촌영락재",
+    "type": "한 옥",
+    "area": "서울/종로구",
+    "numberOfGuests": "기준 2명 (최대 6명)",
+    "price": "₩250,000~₩400,000",
+    "src": "/images/Mypage/roompicture/hanok.jpeg",
+    "used": "3"
+  },
+  {
+    "id": 1,
+    "title": "수화림",
+    "type": "펜 션",
+    "area": "충청/서산시",
+    "numberOfGuests": "기준 2명 (최대 4명)",
+    "price": "₩180,000~₩290,000",
+    "src": "/images/Mypage/roompicture/pension.jpeg",
+    "used": "4"
+  },
+  {
+    "id": 2,
+    "title": "노고마주",
+    "type": "민 박",
+    "area": "전라/구례군",
+    "numberOfGuests": "기준 2명 (최대 3명)",
+    "price": "₩238,000~₩368,000",
+    "src": "/images/Mypage/roompicture/minbak.jpeg",
+    "used": "4"
+  },
+  {
+    "id": 3,
+    "title": "아비오호텔",
+    "type": "호 텔",
+    "area": "강원/강릉시",
+    "numberOfGuests": "기준 2명 (최대 3명)",
+    "price": "₩130,000~₩420,000",
+    "src": "/images/Mypage/roompicture/hotel.jpeg",
+    "used": "4"
+  }
+]

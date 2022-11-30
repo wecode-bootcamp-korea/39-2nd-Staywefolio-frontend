@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "kakao_id": "a",
+    "name": "상준",
+    "email": "abcd@abcd",
+    "phone_number": "010-1111-1111"
+  },
+  {
+    "id": 1,
+    "kakao_id": "b",
+    "name": "수정",
+    "email": "abcd@abcd",
+    "phone_number": "010-2222-2222"
+  },
+  {
+    "id": 2,
+    "kakao_id": "a",
+    "name": "동기",
+    "email": "abcd@abcd",
+    "phone_number": "010-3333-3333"
+  }
+]
