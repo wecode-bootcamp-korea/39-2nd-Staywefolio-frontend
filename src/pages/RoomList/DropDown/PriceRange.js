@@ -11,13 +11,6 @@ export default function PriceRange({ handleFilter }) {
   });
   const { min, max } = range;
 
-  // const submitHandleFilter = () => {
-  //   setPrice;
-  // };
-
-  console.log(range.min, range.max);
-  console.log(Object.keys(range));
-
   return (
     <ModalBack>
       <PeopleTitle>가격 범위</PeopleTitle>
