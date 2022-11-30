@@ -54,12 +54,13 @@ const Top = styled(Slider)`
 `;
 
 const Title = styled.div`
-  text-align: center;
+  margin-top: 50px;
   margin-bottom: 50px;
   font-size: 12px;
-  letter-spacing: 11px;
   font-weight: 700;
+  text-align: center;
   line-height: 30px;
+  letter-spacing: 11px;
 `;
 const RoomImg = styled.img`
   max-width: 100%;
