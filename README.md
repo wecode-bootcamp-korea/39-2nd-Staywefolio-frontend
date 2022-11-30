@@ -47,8 +47,7 @@ React, HTML, STYLED-COMPONENTS
     <tr>
       <td align="center"><a href="https://github.com/sujeong-dev"><img src="https://avatars.githubusercontent.com/u/112826154?v=4" width="100px;" alt=""/><br /><sub><b>구수정</b></sub></a><br /></td>
       <td align="center"><a href="https://github.com/Sing-DongKi"><img src="https://avatars.githubusercontent.com/u/112953746?v=4" width="100px;" alt=""/><br /><sub><b>김동기</b></sub></a><br /></td>
-      <td align="center"><a href="https://github.com/Dave-ahn
-"><img src="https://avatars.githubusercontent.com/u/110475834?v=4" width="100px;" alt=""/><br /><sub><b>안상준</b></sub></a><br /></td>
+      <td align="center"><a href="https://github.com/Dave-ahn"><img src="https://avatars.githubusercontent.com/u/110475834?v=4" width="100px;" alt=""/><br /><sub><b>안상준</b></sub></a><br /></td>
      <tr/>
   </tbody>
 </table>
