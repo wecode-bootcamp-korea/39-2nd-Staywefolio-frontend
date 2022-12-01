@@ -8,6 +8,7 @@ import Payment from './pages/Payment/Payment';
 import RoomList from './pages/RoomList/RoomList';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
+import Dropdown from './components/Dropdown/Dropdown';
 
 export default function Router() {
   return (
@@ -20,6 +21,7 @@ export default function Router() {
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/room-list" element={<RoomList />} />
+        <Route path="/dropdown" element={<Dropdown />} />
       </Routes>
       <Footer />
     </BrowserRouter>
