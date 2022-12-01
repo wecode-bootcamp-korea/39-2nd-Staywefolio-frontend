@@ -21,11 +21,13 @@ export default function Dropdown() {
             <CheckinInfo>
               <CheckinList>
                 <CheckInText>체크인</CheckInText>
+                <CheckInButton>aa</CheckInButton>
               </CheckinList>
             </CheckinInfo>
             <CheckOutInfo>
               <CheckOutList>
                 <CheckOutText>체크아웃</CheckOutText>
+                <CheckOutButton>bb</CheckOutButton>
               </CheckOutList>
             </CheckOutInfo>
           </Checkinout>
@@ -121,11 +123,12 @@ const Area = styled.div`
 `;
 
 const AreaText = styled.button`
+  background-color: white;
+  border: 1px solid #f1f1f1;
   font-weight: 500;
   text-align: left;
   padding: 0 15px;
   margin: 0 5px 0 0;
-  background: #f2f2f2;
   border-radius: 5px;
   width: 100px;
   height: 30px;
@@ -159,13 +162,22 @@ const CheckInText = styled.span`
   font-size: 14px;
 `;
 
+const CheckInButton = styled.button`
+  background-color: white;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 60px;
+  height: 30px;
+`;
+
 const CheckOutInfo = styled.ul`
   display: flex;
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 120px;
+  padding-inline-start: 30px;
 `;
 
 const CheckOutList = styled.li`
@@ -182,23 +194,32 @@ const CheckOutText = styled.span`
   font-size: 14px;
 `;
 
+const CheckOutButton = styled.button`
+  background-color: white;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 60px;
+  height: 30px;
+`;
+
 // ---
 const FilterStayType = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 8%;
+  padding-left: 5%;
 `;
 const NumberOfPeople = styled.button`
   position: relative;
   cursor: pointer;
-  border: 1px solid #e4e4e4;
+  background-color: white;
+  border: 1px solid #f1f1f1;
   background-size: 20px 20px;
   border-radius: 5px;
   width: 150px;
   line-height: 30px;
   text-align: left;
   font-size: 14px;
-  color: #000;
   font-weight: 500;
   padding: 0 23px 0 12px;
   margin-right: 8px;
@@ -211,14 +232,14 @@ const NumberOfPeople = styled.button`
 const Price = styled.button`
   position: relative;
   cursor: pointer;
-  border: 1px solid #e4e4e4;
+  background-color: white;
+  border: 1px solid #f1f1f1;
   background-size: 20px 20px;
   border-radius: 5px;
   width: 150px;
   line-height: 30px;
   text-align: left;
   font-size: 14px;
-  color: #000;
   font-weight: 500;
   padding: 0 23px 0 12px;
   margin-right: 8px;
@@ -230,14 +251,14 @@ const Price = styled.button`
 const StayType = styled.button`
   position: relative;
   cursor: pointer;
-  border: 1px solid #e4e4e4;
+  background-color: white;
+  border: 1px solid #f1f1f1;
   background-size: 20px 20px;
   border-radius: 5px;
   width: 150px;
   line-height: 30px;
   text-align: left;
   font-size: 14px;
-  color: #000;
   font-weight: 500;
   padding: 0 23px 0 12px;
   margin-right: 8px;
@@ -249,14 +270,14 @@ const StayType = styled.button`
 const Theme = styled.button`
   position: relative;
   cursor: pointer;
-  border: 1px solid #e4e4e4;
+  background-color: white;
+  border: 1px solid #f1f1f1;
   background-size: 20px 20px;
   border-radius: 5px;
   width: 150px;
   line-height: 30px;
   text-align: left;
   font-size: 14px;
-  color: #000;
   font-weight: 500;
   padding: 0 23px 0 12px;
   margin-right: 8px;
