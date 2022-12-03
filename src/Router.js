@@ -19,7 +19,7 @@ export default function Router() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/room-list" element={<RoomList />} />
+        <Route path="/roomlist" element={<RoomList />} />
       </Routes>
       <Footer />
     </BrowserRouter>

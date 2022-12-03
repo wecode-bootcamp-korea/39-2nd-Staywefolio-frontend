@@ -1,0 +1,79 @@
+{
+    "data": [
+        {
+      "id": 1,
+      "name": "camping?camping!",
+      "type": "캠핑",
+      "region": "충청도",
+      "numberOfGuests": 5,
+      "price": 50000,
+      "thumbnailImage": "https://cdn.pixabay.com/photo/2020/02/04/10/42/people-4817872_960_720.jpg"
+        },
+        {
+            "id": 2,
+            "name": "너도나도캠퍼",
+            "type": "캠핑",
+            "region": "제주도",
+            "numberOfGuests": 10,
+            "price": 300000,
+            "thumbnailImage": "https://cdn.pixabay.com/photo/2016/11/29/04/17/bonfire-1867275_960_720.jpg"
+              },
+              {
+                "id": 3,
+                "name": "푸른캠핑",
+                "type": "캠핑",
+                "region": "경기도",
+                "numberOfGuests": 2,
+                "price": 50000,
+                "thumbnailImage": "ttps://cdn.pixabay.com/photo/2019/10/18/05/04/tent-4558240_960_720.jpg"
+                  },
+                  {
+                    "id": 4,
+                    "name": "인디언캠핑장",
+                    "type": "캠핑",
+                    "region": "강원도",
+                    "numberOfGuests": 2,
+                    "price": 100000,
+                    "thumbnailImage": "https://cdn.pixabay.com/photo/2017/10/28/23/18/indians-2898463_960_720.jpghttps://cdn.pixabay.com/photo/2021/10/27/05/40/girl-6746028_960_720.jpg"
+                      },
+                      {
+                        "id": 5,
+                        "name": "시그니쳐 부산",
+                        "type": "호텔",
+                        "region": "부산",
+                        "numberOfGuests": 2,
+                        "price": 100000,
+                        "thumbnailImage": "https://cdn.pixabay.com/photo/2013/04/18/14/39/ship-105596_1280.jpg"
+                          },
+                          {
+                            "id": 6,
+                            "name": "글래스 여의도",
+                            "type": "호텔",
+                            "region": "서울",
+                            "numberOfGuests": 2,
+                            "price": 100000,
+                            "thumbnailImage": "https://cdn.pixabay.com/photo/2020/03/09/23/59/buildings-4917447_1280.jpg"
+                              },
+                              {
+                                "id": 7,
+                                "name": "경주 코 묻은 호텔",
+                                "type": "호텔",
+                                "region": "경주",
+                                "numberOfGuests": 2,
+                                "price": 800000,
+                                "thumbnailImage": "https://cdn.pixabay.com/photo/2018/12/29/14/11/barcelona-3901449_1280.jpg"
+                                  },
+                                  {
+                                    "id": 8,
+                                    "name": "고인돌 집 강원",
+                                    "type": "한옥",
+                                    "region": "강원도",
+                                    "numberOfGuests": 5,
+                                    "price": 200000,
+                                    "thumbnailImage": "https://cdn.pixabay.com/photo/2014/10/31/00/07/lanyon-quoit-510059_960_720.jpg"
+                                      }
+        
+
+        
+    ]
+}
