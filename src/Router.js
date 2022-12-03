@@ -16,7 +16,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/booking" element={<Booking />} />
+        <Route path="/booking/:roomId" element={<Booking />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/room-list" element={<RoomList />} />
