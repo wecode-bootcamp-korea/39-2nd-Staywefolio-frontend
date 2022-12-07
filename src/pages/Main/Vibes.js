@@ -10,7 +10,7 @@ export default function Vibes() {
         감성을 더해줄 음악
       </SecTiltle>
       <MusicList>
-        {MusicInfo.map(info => {
+        {MUSICINFO.map(info => {
           return (
             <MusicBox key={info.id}>
               <Video href={info.link}>
@@ -122,7 +122,7 @@ const Dot = styled.span`
   border-radius: 2px;
 `;
 
-const MusicInfo = [
+const MUSICINFO = [
   {
     id: 0,
     link: 'https://youtu.be/Cs-rd_g7yzA',
