@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { KAKAO_AUTH_URL } from './OAuth';
 
-//참고 블로그 https://han-py.tistory.com/417
-
 export default function Login() {
   return (
     <Contents>
@@ -22,8 +20,8 @@ export default function Login() {
 }
 
 const Contents = styled.div`
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   font-size: 32px;
 `;
 
@@ -32,7 +30,7 @@ const ContainerSubTitle = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 25vh;
-  padding-top: 10vh;
+  padding-top: 3vh;
   text-align: center;
   width: 100%;
   text-transform: uppercase;
@@ -66,13 +64,14 @@ const LinkBox = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 5vh;
+  margin-bottom: 380px;
 `;
 
 const LoginButton = styled.img`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 20vw;
+  width: 10vw;
 
   cursor: pointer;
 `;

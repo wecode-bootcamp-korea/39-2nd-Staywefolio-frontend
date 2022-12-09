@@ -35,15 +35,15 @@ export default function Footer() {
         </MemberInfoBox>
       </TeamInfoBox>
       <LogoBox>
-        <TeamLogoImg src="images/footer/TeamLogo.png" alt="teamlogo" />
+        <TeamLogoImg src="/images/footer/TeamLogo.png" alt="teamlogo" />
         <SocialEmojis>
           <LogoImg
-            src="images/footer/NotionLogo.png"
+            src="/images/footer/NotionLogo.png"
             alt="notion"
             onClick={() => window.open(notionURL)}
           />
           <LogoImg
-            src="images/footer/GithubLogo.png"
+            src="/images/footer/GithubLogo.png"
             alt="github"
             onClick={() => window.open(githubURL)}
           />
@@ -58,7 +58,7 @@ const Container = styled.div`
   justify-content: space-between;
   padding: 3vh 5vw;
   background-color: #f5f5f5;
-  height: 400px;
+  /* height: 250px; */
 
   @media screen and (min-width: 700px) {
     align-items: center;
@@ -76,7 +76,6 @@ const TeamInfoBox = styled.div`
   flex-direction: column;
   width: 30vw;
   margin-left: 5vw;
-  margin-bottom: 4vh;
 
   @media screen and (min-width: 300px) {
     display: flex;
@@ -88,10 +87,10 @@ const TeamInfoBox = styled.div`
 `;
 
 const AboutTeam = styled.div`
-  width: 800px;
+  width: 300px;
   color: #222222;
   font-weight: 700;
-  font-size: 100px;
+  font-size: 50px;
 
   @media screen and (max-width: 1000px) {
     display: none;
@@ -116,7 +115,7 @@ const Position = styled.div`
   display: flex;
   text-align: start;
   align-items: center;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 20px;
   width: 90%;
   margin-right: 3vw;
@@ -131,10 +130,10 @@ const MemberInfo = styled.div`
   color: #ffffff;
   background-color: #222222;
   min-width: 80px;
-  font-weight: 800;
+  font-weight: 500;
   border-radius: 3px;
-  width: 8vw;
-  height: 6vh;
+  width: 6vw;
+  height: 5vh;
   margin: 5vh 0.3vw;
   outline: 0;
 
@@ -148,8 +147,8 @@ const MemberInfo = styled.div`
     background-color: #ffffff;
     border: 1px #345816 solid;
     font-size: 130%;
-    width: 10vw;
-    height: 8vh;
+    width: 8vw;
+    height: 7vh;
   }
 `;
 
@@ -157,6 +156,7 @@ const LogoBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 200px;
 
   @media screen and (min-width: 300px) {
     display: flex;
@@ -170,6 +170,8 @@ const LogoBox = styled.div`
 const TeamLogoImg = styled.img`
   cursor: pointer;
   transition: 1sec;
+  width: 200px;
+  height: 150px;
 `;
 
 const SocialEmojis = styled.div`
@@ -181,7 +183,7 @@ const SocialEmojis = styled.div`
 const LogoImg = styled.img`
   display: flex;
   align-items: center;
-  width: 8vw;
+  width: 4vw;
   margin: 0 2vw;
   cursor: pointer;
   transition: 0.5s;

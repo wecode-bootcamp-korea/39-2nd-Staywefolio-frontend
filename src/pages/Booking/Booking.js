@@ -29,35 +29,36 @@ export default function Booking() {
 
   // checkin, checkout, 연박일자 계산
   useEffect(() => {
-    if (startDate === null || endDate == null) return;
-    const startYear = startDate.getFullYear();
-    const startMonth = startDate.getMonth() + 1;
-    const startDay = startDate.getDate();
-    const endYear = endDate.getFullYear();
-    const endMonth = endDate.getMonth() + 1;
-    const endDay = endDate.getDate();
+    if (startDate !== null && endDate !== null) {
+      const startYear = startDate.getFullYear();
+      const startMonth = startDate.getMonth() + 1;
+      const startDay = startDate.getDate();
+      const endYear = endDate.getFullYear();
+      const endMonth = endDate.getMonth() + 1;
+      const endDay = endDate.getDate();
 
-    const start = new Date(startYear, startMonth, startDay);
-    const end = new Date(endYear, endMonth, endDay);
-    const gapTime = end.getTime() - start.getTime();
-    const days = gapTime / (1000 * 60 * 60 * 24);
+      const start = new Date(startYear, startMonth, startDay);
+      const end = new Date(endYear, endMonth, endDay);
+      const gapTime = end.getTime() - start.getTime();
+      const days = gapTime / (1000 * 60 * 60 * 24);
 
-    setDateInfo({
-      ...dateInfo,
-      checkIn:
-        startYear.toString() +
-        '.' +
-        startMonth.toString() +
-        '.' +
-        (startDay < 9 ? '0' + startDay.toString() : startDay.toString()),
-      checkOut:
-        endYear.toString() +
-        '.' +
-        endMonth.toString() +
-        '.' +
-        (endDay < 9 ? '0' + endDay.toString() : endDay.toString()),
-      nights: days,
-    });
+      setDateInfo({
+        ...dateInfo,
+        checkIn:
+          startYear.toString() +
+          '.' +
+          startMonth.toString() +
+          '.' +
+          (startDay < 9 ? '0' + startDay.toString() : startDay.toString()),
+        checkOut:
+          endYear.toString() +
+          '.' +
+          endMonth.toString() +
+          '.' +
+          (endDay < 9 ? '0' + endDay.toString() : endDay.toString()),
+        nights: days,
+      });
+    }
   }, [dateRange]);
 
   // slick slide 옵션
@@ -70,6 +71,18 @@ export default function Booking() {
   };
   // 네이버지도 옵션
   const mapElement = useRef(null);
+
+  //TODO: 숙소 상세리스트 API fetch
+  useEffect(() => {
+    fetch(`${BASE_URL}/products/${roomId}`, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+    })
+      .then(response => response.json())
+      .then(result => {
+        setRoomInfo(result.data[0]);
+      });
+  }, []);
 
   useEffect(() => {
     const { naver } = window;
@@ -94,18 +107,6 @@ export default function Booking() {
     });
   }, [roomInfo]);
 
-  //TODO: 숙소 상세리스트 API fetch
-  useEffect(() => {
-    fetch(`${BASE_URL}/products/1`, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json;charset=utf-8' },
-    })
-      .then(response => response.json())
-      .then(result => {
-        setRoomInfo(result.data[0]);
-      });
-  }, []);
-
   // //TODO: mock data 테스트
   // useEffect(() => {
   //   fetch('/data/roomData.json')
@@ -121,17 +122,17 @@ export default function Booking() {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        authorization: localStorage.getItem('token'),
+        Authorization: localStorage.getItem('token'),
       },
       body: JSON.stringify({
         productOptionId: roomId,
-        checkin: checkIn,
-        checkout: checkOut,
-        price: nights * Number(roomInfo.rooms[0].price).toLocaleString(),
-        numberOfGuests: roomInfo.rooms[0].numberOfGuests,
+        checkIn: checkIn,
+        checkOut: checkOut,
+        price: nights * Number(roomInfo.rooms[0].price),
+        numberOfUser: roomInfo.rooms[0].numberOfGuests,
       }),
     });
-    alert('결제가 완료되었습니다.');
+    alert('떠날 준비가 완료되었습니다🎉');
     navigate('/');
   };
 
@@ -143,7 +144,7 @@ export default function Booking() {
       <RoomContainer>
         <Room>
           <SummaryContainer>
-            <Name>{roomInfo.rooms[0].name}</Name>
+            <Name>{roomInfo.name}</Name>
             <DayPicker
               dateRange={dateRange}
               startDate={startDate}
@@ -216,7 +217,7 @@ export default function Booking() {
         </Room>
       </RoomContainer>
       <RoomLocationDescription>
-        {roomInfo.rooms[0].name} [{roomInfo.address}] 에 위치해있습니다.
+        {roomInfo.name} [{roomInfo.address}] 에 위치해있습니다.
       </RoomLocationDescription>
       <RoomMap ref={mapElement} />
       <RoomFaq>

@@ -56,7 +56,7 @@ const Top = styled(Slider)`
 const Title = styled.div`
   margin-top: 50px;
   margin-bottom: 50px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   text-align: center;
   line-height: 30px;

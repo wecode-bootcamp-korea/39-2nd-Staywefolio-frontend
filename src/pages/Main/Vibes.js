@@ -49,7 +49,7 @@ const Video = styled.a`
 const SecTiltle = styled.div`
   text-align: center;
   margin-bottom: 50px;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 11px;
   font-weight: 700;
   line-height: 30px;

@@ -91,7 +91,6 @@ export default function WhereTo() {
           </SearchBtn>
         </WhereWrapper>
       </Modal>
-      <WhenTo />
     </>
   );
 }
@@ -107,7 +106,7 @@ const WhereButton = styled.button`
   cursor: pointer;
 
   &:first-child {
-    background: url(./images/NavImages/where.png) no-repeat 0 50%;
+    background: url(/images/NavImages/where.png) no-repeat 0 50%;
     background-size: 25px 25px;
   }
 

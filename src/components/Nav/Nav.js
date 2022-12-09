@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import WhereTo from './WhereTo';
+import WhenTo from './WhenTo';
 
 export default function Nav() {
   const isLoginCheck = !!localStorage.getItem('token');
@@ -18,20 +19,29 @@ export default function Nav() {
       </Link>
       <ButtonWrap>
         <WhereTo />
+        <WhenTo />
       </ButtonWrap>
 
-      <Box>
-        <Menu to="/roomList">FIND STAY</Menu>
-      </Box>
+      {/* <Box>
+        <Menu to="/room-list">FIND STAY</Menu>
+      </Box> */}
       {isLoginCheck ? (
-        <>
-          <Link to="/mypage">MYPAGE</Link>
-          <Link to="/" onClick={handleLogout}>
+        <LoginContainer>
+          <LoginBox>
+            <Menu to="/room-list">FIND STAY</Menu>
+          </LoginBox>
+          <LoginBox to="/mypage">MYPAGE</LoginBox>
+          <LoginBox to="/" onClick={handleLogout}>
             LOGOUT
-          </Link>
-        </>
+          </LoginBox>
+        </LoginContainer>
       ) : (
-        <LoginBox to="/login">LOGIN</LoginBox>
+        <LoginContainer>
+          <LoginBox>
+            <Menu to="/room-list">FIND STAY</Menu>
+          </LoginBox>
+          <LoginBox to="/login">LOGIN</LoginBox>
+        </LoginContainer>
       )}
     </Header>
   );
@@ -52,22 +62,24 @@ const Logo = styled.img`
 `;
 
 const ButtonWrap = styled.div`
-  position: absolute;
-  left: auto;
-  right: 545px;
+  /* position: absolute; */
+  /* left: auto; */
+  /* right: 545px; */
   /* margin-right: 140px; */
-  margin-left: -160px;
+  /* margin-left: -160px; */
   text-align: center;
 `;
 
 const Box = styled.div`
   margin: 0 -1000px 0 150px;
 `;
+const LoginContainer = styled.div`
+  text-decoration: none;
+`;
 
 const LoginBox = styled(Link)`
   height: 15px;
-  margin-right: 30px;
-  padding-left: 30px;
+  margin-right: 20px;
   text-decoration: none;
   color: grey;
 `;

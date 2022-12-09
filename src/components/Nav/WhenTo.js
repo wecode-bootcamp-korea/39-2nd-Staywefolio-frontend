@@ -30,7 +30,7 @@ const WhenButton = styled.button`
   cursor: pointer;
 
   &:nth-child(2) {
-    background: url(./images/NavImages/when.png) no-repeat 0 50%;
+    background: url(/images/NavImages/when.png) no-repeat 0 50%;
     background-size: 25px 25px;
   }
 `;

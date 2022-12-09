@@ -8,7 +8,7 @@ import PriceRange from './DropDown/PriceRange';
 import Stay from './DropDown/Stay';
 import Theme from './DropDown/Theme';
 import DayPicker from '../../components/DayPicker/DayPicker';
-import CustomInput from '../../components/DayPicker/CustomInput';
+import CustomInput from './DayPicker/CustomInput';
 import { BASE_URL } from '../../config';
 
 const SORT = [
@@ -125,13 +125,13 @@ export default function RoomList() {
     const start =
       startYear.toString() +
       '.' +
-      startMonth.toString() +
+      (startMonth < 10 ? '0' + startMonth.toString() : startMonth.toString()) +
       '.' +
       (startDay < 10 ? '0' + startDay.toString() : startDay.toString());
     const end =
       endYear.toString() +
       '.' +
-      endMonth.toString() +
+      (endMonth < 10 ? '0' + endMonth.toString() : endMonth.toString()) +
       '.' +
       (endDay < 10 ? '0' + endDay.toString() : endDay.toString());
 
@@ -145,26 +145,26 @@ export default function RoomList() {
 
   const queryRegion = searchParams.getAll('region');
 
-  // //TODO: 상품리스트 get요청
-  // useEffect(() => {
-  //   fetch(`${BASE_URL}/products?${searchParams.toString()}`, {
-  //     method: 'GET',
-  //     headers: { 'Content-Type': 'application/json;charset=utf-8' },
-  //   })
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       setRoomList(result.data);
-  //     });
-  // }, [searchParams]);
-
-  //TODO: mock data 테스트
+  //TODO: 상품리스트 get요청
   useEffect(() => {
-    fetch('/data/InfoListData.json')
+    fetch(`${BASE_URL}/products?${searchParams.toString()}`, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+    })
       .then(response => response.json())
       .then(result => {
         setRoomList(result.data);
       });
-  }, []);
+  }, [searchParams]);
+
+  // //TODO: mock data 테스트
+  // useEffect(() => {
+  //   fetch('/data/InfoListData.json')
+  //     .then(response => response.json())
+  //     .then(result => {
+  //       setRoomList(result.data);
+  //     });
+  // }, []);
 
   return (
     <Contents>
